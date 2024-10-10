@@ -61,6 +61,7 @@ class VersionCheckerPlugin @Inject constructor(
     }
 
     override fun isClosedLoopAllowed(value: Constraint<Boolean>): Constraint<Boolean> {
+        //version checker
         checkWarning()
         versionCheckerUtils.triggerCheckVersion()
         if (lastCheckOlderThan(gracePeriod.veryOld.daysToMillis()))
