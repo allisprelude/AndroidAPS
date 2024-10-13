@@ -121,8 +121,8 @@ class ObjectivesPlugin @Inject constructor(
     }
 
     override fun isClosedLoopAllowed(value: Constraint<Boolean>): Constraint<Boolean> {
-        /*if (!objectives[MAXIOB_ZERO_CL_OBJECTIVE].isStarted)
-            value.set(false, rh.gs(R.string.objectivenotstarted, MAXIOB_ZERO_CL_OBJECTIVE + 1), this)*/
+        if (!objectives[MAXIOB_ZERO_CL_OBJECTIVE].isStarted)
+            value.set(false, rh.gs(R.string.objectivenotstarted, MAXIOB_ZERO_CL_OBJECTIVE + 1), this)
         return value
     }
 
